@@ -8,22 +8,27 @@
 
 <div class="h-screen">
     <div class="grid grid-cols-3 gap-4 p-2 h-full">
-        <div class="h-full">
+       
             <div class="card lg:card-side bg-base-100 shadow-xl h-full">
-                <div class="card-body  overflow-y-scroll scroll-dark">
-                    <label class="relative  block">
-                        <i class="fa-solid fa-magnifying-glass pointer-events-none absolute top-1/2 transform -translate-y-1/2 left-3"></i>
-                        
-                        <input id="searchContact" type="text" placeholder="Search contacts" class="input input-bordered w-full pl-12"
-                            value="">
-
-                    </label>
-                    <button id="create-contact" data-toggle="open-modal" data-target="#modalCreateContact" class="btn btn-ghost"><i
-                            class="fa-solid fa-user-plus"></i>&nbsp;&nbsp;Create new contact</button>
-
-                    <div id="contentContacts" class="grid grid-flow-row auto-rows-max"
-                        style="height: -webkit-fill-available">
+                <div class="card-body h-full">
+                    <div class="grid grid-flow-row h-full">
+                        <div class="row-span-1">
+                            <label class="relative block">
+                                <i class="fa-solid fa-magnifying-glass pointer-events-none absolute top-1/2 transform -translate-y-1/2 left-3"></i>
+                                
+                                <input id="searchContact" type="text" placeholder="Search contacts" class="input input-bordered w-full pl-12"
+                                    value="">
+        
+                            </label>
+                            <div class="text-center">
+                                <button id="create-contact" data-toggle="open-modal" data-target="#modalCreateContact" class="btn btn-ghost"><i
+                                    class="fa-solid fa-user-plus text-center"></i>&nbsp;&nbsp;Create new contact</button>
+                            </div>
+                        </div>
+                       
+                        <div id="contentContacts" class="row-span-full overflow-y-scroll scroll-dark text-center"></div>
                     </div>
+                   
 
                     <!-- Put this part before </body> tag -->
                     <div class="modal" id="modalCreateContact">
@@ -94,7 +99,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        
         <div class="col-span-2 h-full">
             <div class="card lg:card-side bg-base-100 shadow-xl h-full ">
                 <div class="card-body overflow-y-scroll scroll-dark">
