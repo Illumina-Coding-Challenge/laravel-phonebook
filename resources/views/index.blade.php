@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="h-screen">
-    <div class="grid grid-cols-3 gap-4 p-2 h-full">
+    <div class="grid grid-cols-1 md:grid-cols-3 md:gap-4 p-2 h-full">
        
             <div class="card lg:card-side bg-base-100 shadow-xl h-full">
                 <div class="card-body h-full">
