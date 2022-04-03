@@ -5,8 +5,10 @@ export function getContact(params) {
     
     var contentContacts = $('#contentContacts');
 
+    // Show loading to contact list
     buildSpinner(contentContacts);
 
+    // Fetch request get all contact list
     fetch("api/contact", {
         method: 'get',
         credentials: "same-origin",
@@ -22,12 +24,12 @@ export function getContact(params) {
 
         if (results.status == 'success') {
             var contacts = results.data;
-
+            // Save contact list to class ContactList
             contactList.contacts = contacts;
-
+            // Build contact list
             let html = contactList.buildContactList();
             contentContacts.html(html);
-
+            // Init event and listener for newly build contact list
             init();
 
         } else {
