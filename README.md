@@ -1,33 +1,38 @@
 
-## A. REQUIREMENT
-At the time of developement phase, below is the requirement specification to run the project.
-- Flutter Channel Stable 2.10.0 (Come with Dart version 2.16.0 & DevTools version 2.9.2)
-- Android toolchain - develop for Android devices (Android SDK version 32.1.0-rc1)
-- Android Studio (version 2021.1)
-- Android Emulator / Android Devices (Android 5.0 and above)
 
-Run `flutter doctor` or `flutter doctor -v` and ensure all requirement above are meet
 
-## B. INSTALLATION STEPS
+<h3 align="center">
+You can visit this Demo at : <a href="https://phonebook.zulzayn.com" target="_blank">phonebook.zulzayn.com</a>
+</h3> 
+
+## REQUIREMENT
+
+During my development, i use Laravel 9 and below are the version to run the assessment
+- PHP 8.1.4
+- Composer 2.3.2
+
+## INSTALLATION STEPS
+
+### To Run Web System
 
 **1) Clone**
-- HTTPS : `https://gitlab.com/zulzayn/flutter-phonebook.git` 
-<br> or
-- SSH : `git@gitlab.com:zulzayn/flutter-phonebook.git`
+- SSH : `git clone git@gitlab.com:zulzayn/laravel-phonebook.git`
+- HTTPS : `git clone https://gitlab.com/zulzayn/laravel-phonebook.git`
 
-**2) run - `flutter pub get`**
+**2) run - `composer install`**
 
+**3) Copy .env.example file and rename to .env** 
 
-### DEVELOPMENT RUN MODE
+_For database:-_
+- change `DB_DATABASE=dev_phonebook`
+- change database credential accordingly to your MySQL username and password
 
-**A) Debug Mode**
-- run - `flutter run` 
+**5) run - `php artisan key:generate`**
 
-**B) Release Mode** 
-- run - `flutter run --release` 
+**6) Create database - dev_phonebook**
 
-**C) Profile Mode** 
-- run - `flutter run --profile` 
+**7) run - `php artisan migrate`**
 
-More info on build mode - https://docs.flutter.dev/testing/build-modes
+**8) You`re Good to go! Run the system in any PHP Webserver (nginx/apache)**
+
 
