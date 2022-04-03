@@ -11,7 +11,7 @@
        
             <div class="card lg:card-side bg-base-100 shadow-xl h-full">
                 <div class="card-body h-full">
-                    <div class="grid grid-flow-row h-full">
+                    <div class="grid grid-rows-6 h-full">
                         <div class="row-span-1">
                             <label class="relative block">
                                 <i class="fa-solid fa-magnifying-glass pointer-events-none absolute top-1/2 transform -translate-y-1/2 left-3"></i>
@@ -26,7 +26,7 @@
                             </div>
                         </div>
                        
-                        <div id="contentContacts" class="row-span-full overflow-y-scroll scroll-dark text-center"></div>
+                        <div id="contentContacts" class="row-span-5 overflow-y-scroll scroll-dark text-center"></div>
                     </div>
                    
 
